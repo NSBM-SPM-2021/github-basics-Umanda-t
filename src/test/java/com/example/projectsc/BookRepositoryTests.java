@@ -62,7 +62,7 @@ public class BookRepositoryTests {
 @Test
 public void testDelete()
 {
-    Long id= Long.valueOf(27);
+    Long id= Long.valueOf(1);
     repo.deleteById(id);
     Optional<Book> optionalBook= repo.findById(id);
     Assertions.assertThat(optionalBook).isNotPresent();
