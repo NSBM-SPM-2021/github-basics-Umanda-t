@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <!-- Google fonts -->
+    <link th:href="@{//fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap}" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link th:href="@{/css/style-starter.css}" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- header -->
+<header id="site-header" class="fixed-top">
+    <section class="w3l-header-4">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+
+                <h1><a class="navbar-brand" th:href="@{/}" ><span> <img th:src="@{/images/logo.ico}" ></span>
+                    Car Servicing</span>
+                </a></h1>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fa icon-expand fa-bars"></span>
+                    <span class="fa icon-close fa-times"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" th:href="@{/}">Home </a>
+                        </li>
+                        <li class="nav-item @@about__active">
+                            <a class="nav-link" th:href="@{/aboutview}">About</a>
+                        </li>
+                        <li class="nav-item @@services__active">
+                            <a class="nav-link" th:href="@{/servicesview}">Our Services</a>
+                        </li>
+                        <li class="nav-item @@services__active">
+                            <a class="nav-link"th:href="@{/login}">Login</a>
+                        </li>
+                        <li class="nav-item @@services__active">
+                            <a class="nav-link"th:href="@{/register}">SignUp</a>
+                        </li>
+                        <li class="nav-item @@services__active">
+                            <a class="nav-link"th:href="@{/booksregister}">Service Register</a>
+                        </li>
+                        <li class="nav-item @@services__active">
+                            <a class="nav-link"th:href="@{/stafflogin}">Staff Login</a>
+                        </li>
+                        <li class="nav-item ml-3">
+                            <a th:href="@{/contactview}" class="btn btn-outline-primary btn-style mr-2">Contact Us</a>
+                        </li>
+                    </ul>
+
+                    <!-- //toggle switch for light and dark theme -->
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+    </section>
+</header>
+<!-- //header -->
+
+
+<script th:src="@{/js/jquery-3.3.1.min.js}"></script> <!-- Common jquery plugin -->
+
+<script th:src="@{/js/theme-change.js}"></script><!-- theme switch js (light and dark)-->
+
+<!-- magnific popup -->
+<script th:src="@{/js/jquery.magnific-popup.min.js}"></script>
+<script>
+    $(document).ready(function () {
+        $('.popup-with-zoom-anim').magnificPopup({
+            type: 'inline',
+
+            fixedContentPos: false,
+            fixedBgPos: true,
+
+            overflowY: 'auto',
+
+            closeBtnInside: true,
+            preloader: false,
+
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-zoom-in'
+        });
+
+        $('.popup-with-move-anim').magnificPopup({
+            type: 'inline',
+
+            fixedContentPos: false,
+            fixedBgPos: true,
+
+            overflowY: 'auto',
+
+            closeBtnInside: true,
+            preloader: false,
+
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-slide-bottom'
+        });
+    });
+</script>
+<!-- magnific popup -->
+
+<script src="@{/js/owl.carousel.js}"></script>
+<!-- script for tesimonials carousel slider -->
+<script>
+    $(document).ready(function () {
+        $("#owl-demo1").owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: false,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                736: {
+                    items: 1,
+                    nav: false
+                },
+                1000: {
+                    items: 2,
+                    nav: false,
+                    loop: false
+                }
+            }
+        })
+    })
+</script>
+<!-- //script for tesimonials carousel slider -->
+
+<!--/MENU-JS-->
+<script>
+    $(window).on("scroll", function () {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 80) {
+            $("#site-header").addClass("nav-fixed");
+        } else {
+            $("#site-header").removeClass("nav-fixed");
+        }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function () {
+        $("header").toggleClass("active");
+    });
+    $(document).on("ready", function () {
+        if ($(window).width() > 991) {
+            $("header").removeClass("active");
+        }
+        $(window).on("resize", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+        });
+    });
+</script>
+<!--//MENU-JS-->
+
+<!-- disable body scroll which navbar is in active -->
+<script>
+    $(function () {
+        $('.navbar-toggler').click(function () {
+            $('body').toggleClass('noscroll');
+        })
+    });
+</script>
+<!-- //disable body scroll which navbar is in active -->
+
+<!--bootstrap-->
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<!-- //bootstrap-->
+</body>
+</html>
