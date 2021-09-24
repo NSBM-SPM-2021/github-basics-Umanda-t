@@ -20,10 +20,10 @@ public class CustomerRepositoryTests {
     @Test
     public void testCreateCustomer() {
         Customer customer = new Customer();
-        customer.setEmail("Ema@gmail.com");
-        customer.setPassword("okiygt2");
-        customer.setFirstName("Ema");
-        customer.setLastName("Jane");
+        customer.setEmail("Umanda2210@gmail.com");
+        customer.setPassword("Umanda");
+        customer.setFirstName("umanda");
+        customer.setLastName("Thathsarani");
 
         Customer savedCustomer = repo.save(customer);
 
