@@ -111,4 +111,14 @@ public class AppController {
 
        return "redirect:/list_Book";
     }
+
+    @GetMapping("/aboutview")
+    public String viewAboutPage() {
+        return "about";
+    }
+
+    @GetMapping("/servicesview")
+    public String viewServicePage() {
+        return "services";
+    }
 }
