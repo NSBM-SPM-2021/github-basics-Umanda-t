@@ -37,15 +37,190 @@
                 We are committed to deliver our service values and we are proud of our customized service.
             </p>
             <a href="#url" class="img-height">
-                <img src="assets/images/ab.jpg" alt="" class="radius-image img-fluid mt-md-5 mt-4">
+                <img th:src="@{assets/images/ab.jpg}" alt="" class="radius-image img-fluid mt-md-5 mt-4">
             </a>
         </div>
     </div>
     </div>
 </section>
 
+<section class="w3l-content-4 py-5" id="features">
+    <div class="content-4-main py-lg-5 py-md-4">
+        <div class="container">
+            <div class="content-info-in row">
+                <div class="content-left col-lg-8">
+                    <h3 class="title-small"> What we do</h3>
+                    <h3 class="title-big">Our auto shop technicians are dedicated to helping you get back on the road.</h3>
 
+                    <p class="mt-3">
+                        We value our clients and offer a personal, professional service.
+                        We strive to provide the best quality services at affordable prices by making our brand a consumer's first choice for automobile product and service supports.
+                        <br>
+                        Trust will be gained from consumers through the genuine support given to them by our skilled and dedicated service staff.
+                        We are committed to deliver our service values and we are proud of our customized service.
 
+                    </p>
+                    <img src="assets/images/banner3.jpg" class="img-fluid mt-3" alt="">
+                </div>
+                <div class="content-right col-lg-4 pl-lg-8 mt-lg-4 mt-md-5 mt-3" >
+                    <div class="row content4-right-grids mb-lg-5 mb-4">
+                        <div class="col-2 content4-right-icon">
+                            <div class="content4-icon">
+                                <span class="fa fa-cogs"></span>
+                            </div>
+                        </div>
+                        <div class="col-10 content4-right-info">
+                            <h6><a href="#url">Free diagnostics.</a></h6>
+                            <p>
+                                <br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row content4-right-grids mb-lg-5 mb-4">
+                        <div class="col-2 content4-right-icon">
+                            <div class="content4-icon">
+                                <span class="fa fa-wrench"></span>
+                            </div>
+                        </div>
+                        <div class="col-10 content4-right-info">
+                            <h6><a href="#url"> Fast repair.</a></h6>
+                            <p><br></p>
+                        </div>
+                    </div>
+                    <div class="row content4-right-grids">
+                        <div class="col-2 content4-right-icon">
+                            <div class="content4-icon">
+                                <span class="fa fa-clock-o"></span>
+                            </div>
+                        </div>
+                        <div class="col-10 content4-right-info">
+                            <h6><a href="#url"> 90 days warranty</a></h6>
+                            <p> <br></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div th:insert="footer"> </div>
+<!-- // footer -->
+
+<script th:src="@{/js/jquery-3.3.1.min.js}"></script> <!-- Common jquery plugin -->
+
+<script th:src="@{/js/theme-change.js}"></script><!-- theme switch js (light and dark)-->
+
+<!-- magnific popup -->
+<script th:src="@{/js/jquery.magnific-popup.min.js}"></script>
+<script>
+    $(document).ready(function () {
+        $('.popup-with-zoom-anim').magnificPopup({
+            type: 'inline',
+
+            fixedContentPos: false,
+            fixedBgPos: true,
+
+            overflowY: 'auto',
+
+            closeBtnInside: true,
+            preloader: false,
+
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-zoom-in'
+        });
+
+        $('.popup-with-move-anim').magnificPopup({
+            type: 'inline',
+
+            fixedContentPos: false,
+            fixedBgPos: true,
+
+            overflowY: 'auto',
+
+            closeBtnInside: true,
+            preloader: false,
+
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-slide-bottom'
+        });
+    });
+</script>
+<!-- magnific popup -->
+
+<script src="@{/js/owl.carousel.js}"></script>
+<!-- script for tesimonials carousel slider -->
+<script>
+    $(document).ready(function () {
+        $("#owl-demo1").owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: false,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                736: {
+                    items: 1,
+                    nav: false
+                },
+                1000: {
+                    items: 2,
+                    nav: false,
+                    loop: false
+                }
+            }
+        })
+    })
+</script>
+<!-- //script for tesimonials carousel slider -->
+
+<!--/MENU-JS-->
+<script>
+    $(window).on("scroll", function () {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 80) {
+            $("#site-header").addClass("nav-fixed");
+        } else {
+            $("#site-header").removeClass("nav-fixed");
+        }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function () {
+        $("header").toggleClass("active");
+    });
+    $(document).on("ready", function () {
+        if ($(window).width() > 991) {
+            $("header").removeClass("active");
+        }
+        $(window).on("resize", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+        });
+    });
+</script>
+<!--//MENU-JS-->
+
+<!-- disable body scroll which navbar is in active -->
+<script>
+    $(function () {
+        $('.navbar-toggler').click(function () {
+            $('body').toggleClass('noscroll');
+        })
+    });
+</script>
+<!-- //disable body scroll which navbar is in active -->
+
+<!--bootstrap-->
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<!-- //bootstrap-->
 
 </body>
 </html>
