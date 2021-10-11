@@ -21,9 +21,9 @@ https://vehicleservicecenter.herokuapp.com/
 ## :octocat: ScreenShots
 
 ![homepage](https://user-images.githubusercontent.com/57774048/136754910-653ccff0-bd9f-424b-8bc4-66f36af7514c.png)
-                                          Light Mode
+ ## :Light Mode
 ![home2 light](https://user-images.githubusercontent.com/57774048/136755072-f1f31f46-467e-48c1-b0d6-4351cad1f3d7.png)
-                                          Dark Mode
+ ## :Dark Mode
 ![dark home2](https://user-images.githubusercontent.com/57774048/136755079-ff86ba62-d0d7-4827-8df1-1f2693b1799c.png)
 ![about2](https://user-images.githubusercontent.com/57774048/136755271-6a3708d3-51b6-47c9-b604-76d16fb3c914.png)
 ![our services](https://user-images.githubusercontent.com/57774048/136755310-caf21ca3-82cb-4eb4-b6bd-b1122f313ec0.png)
