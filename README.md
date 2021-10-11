@@ -12,7 +12,7 @@
 * Hibernate
 * Bootstrap
 * JUnit Jupiter and AssertJ
-* H2 database for deployment and mysqldatabase for development
+* H2 database for deployment and mysql database for development
 
 
 
