@@ -28,6 +28,9 @@ https://vehicleservicecenter.herokuapp.com/
 ## 💻 Deployment
 ![deployment image](https://user-images.githubusercontent.com/57774048/136756116-cc9b5bdf-ebb2-4508-9c26-5abbf64d71f7.png)
 
+## 💻 Jenkins Pipeline
+
+![pipeline](https://user-images.githubusercontent.com/57774048/137006608-04e73c1c-1524-4490-9720-7142d5c7504f.png)
 
 ## :octocat: ScreenShots
 
